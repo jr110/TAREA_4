@@ -2,19 +2,17 @@
 
 ## 1. Considera el siguiente fragmento de programa:
 
-
+```
 using System;
 
 class A
 
-    {
+   {
 
     public int a;
-
     public A()
 
-        {
-
+       {
         a = 10;
 
         }
@@ -76,9 +74,10 @@ class B:A
   }
 
   }
+  ```
 
 ### 1.1. ¿Qué valores imprimen las lineas (1) y (2) ?
-Un string que imprime "10" en ambas lineas, ya que no se hace override a la clase A(verificar)
+Un string que imprime "10" en ambas lineas, ya que no se hace override.
 
 ### 1.2.  Redefine el método Display en el espacio indicado,
 
@@ -90,6 +89,7 @@ Nos regresa los valores de 10 y 15
 La palabra virtual. Para hacer override en la clase B y que despliegue valores correctamente.
 
 # 2. Considera el siguiente fragmento de programa:
+```
 using System;
 
 using System.Collections.Generic;
@@ -189,8 +189,9 @@ class Program
  }
 
 }
-
+```
 ## 2.1. Completa el programa.
+Link : https://github.com/jr110/TAREA_4/blob/master/Programas/Program3.cs
 
 ## 2.2. Hay un error en uno de los puntos (A)(B)(C)(D). ¿Cuál es y por qué?
 A: No lleva void en la declaracion del metodo, en vez de eso lleva string.
@@ -204,7 +205,10 @@ Se debe implementar un override a afina para que este funcione apropiadamente.
 Al ser una clase abstracta no se perimite agregar corchetes. Se podria agregar cuando sea virtual, por ejemplo.
 ## 2.5. ¿Qué pasa si el método Afina() lo hacemos virtual en lugar de abstract?
 Se cambia el metodo string a void y se cambian los return por console.writeline, y a la hora de imprimir al final del programa  de pone la linea de codigo mus.afina(); en vez de console.writeline(mus.afina); por que si no seria rebundante y arrojaria error.
+Link del programa: https://github.com/jr110/TAREA_4/blob/master/Programas/Program2.cs
+
 # 3. Implementa el programa utilizando interfaces en lugar de herencia.
+Link: https://github.com/jr110/TAREA_4/blob/master/Programas/Program.cs
 
 
 
