@@ -2,97 +2,98 @@
 
 using System.Collections.Generic;
 
- abstract class Musico
+abstract class Musico
 
-    {
+{
 
     protected string nombre;
 
-    public Musico (string n)
+    public Musico(string n)
 
-        {
+    {
 
-         this.nombre = n;
+        this.nombre = n;
 
-        }
-    
+    }
 
-   public virtual void Afina()
-   {
 
-   }
-  
+    public virtual void Afina()
+    {
 
-   public string Display()
+    }
 
-      { 
 
-       return nombre;
+    public string Display()
 
-      }
-      
-   }
+    {
 
- class Bajista :Musico
-  {
+        return nombre;
+
+    }
+
+}
+
+class Bajista : Musico
+{
 
     public string instrumento;
 
-    public Bajista (string n, string Bajo ):base(n)
+    public Bajista(string n, string Bajo) : base(n)
     {
-        this.nombre=n;
-        this.instrumento=Bajo;
+        this.nombre = n;
+        this.instrumento = Bajo;
     }
 
-public override void Afina()
-{
-Console.WriteLine("El bajista afina");
-}
-    
- }
-
-class Guitarrista :Musico
-
-     {
-
-     public string instrumento;
-     public Guitarrista (string n, string Guitarra ):base(n)
+    public override void Afina()
     {
-        this.nombre=n;
-        this.instrumento=Guitarra;
+        Console.WriteLine("El bajista afina");
+    }
+
+}
+
+class Guitarrista : Musico
+
+{
+
+    public string instrumento;
+    public Guitarrista(string n, string Guitarra) : base(n)
+    {
+        this.nombre = n;
+        this.instrumento = Guitarra;
     }
     public override void Afina()
-{
-    Console.WriteLine("El guitarrista afina");
-}
+    {
+        Console.WriteLine("El guitarrista afina");
+    }
 
-     }
+}
 class Program
 
- {
+{
 
-  public static void Main() {
- 
-  //Musico m = new Musico("Django");
-  Bajista b = new Bajista("Flea","Bajo");
+    public static void Main()
+    {
 
-  Guitarrista g = new Guitarrista("Santana","Guitarra");
+        //Musico m = new Musico("Django");
+        Bajista b = new Bajista("Flea", "Bajo");
 
-  List<Musico> musicos = new List<Musico>();
+        Guitarrista g = new Guitarrista("Santana", "Guitarra");
 
-  musicos.Add(b);
+        List<Musico> musicos = new List<Musico>();
 
-  musicos.Add(g);
+        musicos.Add(b);
 
- 
-  foreach (Musico Mus in musicos)
- {
-    Console.WriteLine(Mus.Display());
-    Mus.Afina();
- }
+        musicos.Add(g);
 
- Console.ReadKey();
-  
- }
+
+        foreach (Musico Mus in musicos)
+        {
+            Console.WriteLine(Mus.Display());
+            Mus.Afina();
+        }
+
+        Console.ReadKey();
+
+    }
 
 }
