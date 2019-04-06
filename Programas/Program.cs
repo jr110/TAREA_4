@@ -5,8 +5,8 @@ using System.Globalization;
 
     public interface IAfinar
     { 
+        string Afina();
         string Nombre();
-      
 
     }
 
